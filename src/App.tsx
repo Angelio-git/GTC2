@@ -50,7 +50,7 @@ function App() {
       <section className="bg-black text-white py-12 px-6 text-center">
         <div className="max-w-4xl mx-auto text-xl leading-relaxed tracking-wide">
           <p>
-            In this reimagined version of Grand Theft Auto (GTA), the game presents a colorful, vibrant urban landscape where the characters, all of whom have Down syndrome, navigate their lives with humor, heart, and a strong sense of community. The story follows a group of friends as they embark on various adventures, tackling everyday challenges with a mix of enthusiasm and creativity.
+            PROMPT: Create a full-body digital illustration in the style of the GTA V cover art — comic-book inspired, gritty and vibrant, with bold outlines and high-energy composition. The subject is an individual with visible and respectful Down syndrome features (such as almond-shaped eyes, flatter nose bridge, and round face), styled to resemble [insert inspiration — e.g. a powerful business figure, glamorous influencer, action hero, etc.]. They are wearing [insert outfit or signature style], posed confidently in front of [insert iconic environment — e.g. private jet, beach, city skyline, etc.]. The scene should be colorful and cinematic, with strong urban energy, a dynamic background, and room for use in a collage-style layout.
           </p>
         </div>
       </section>
