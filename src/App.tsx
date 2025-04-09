@@ -5,17 +5,26 @@ function App() {
   const backgroundImages = {
     main: "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_19-10-26.jpg",
     panels: [
-      [
-        "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_16-24-59.jpg",
-        "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_16-24-50.jpg"
-      ],
-      [
-        "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel3.jpg",
-        "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel4.jpg"
-      ],
-      [
-        "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel5.jpg"
-      ]
+      {
+        images: [
+          "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_16-24-59.jpg",
+          "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_16-24-50.jpg"
+        ],
+        caption: "Our heroes meet in the bustling city center."
+      },
+      {
+        images: [
+          "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel3.jpg",
+          "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel4.jpg"
+        ],
+        caption: "They embark on a thrilling adventure."
+      },
+      {
+        images: [
+          "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel5.jpg"
+        ],
+        caption: "A moment of reflection and fun."
+      }
     ]
   };
 
@@ -27,7 +36,7 @@ function App() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
-        height: '60vh',
+        height: '50vh', // Reduced height here
       }}>
         <div className="panel-content flex flex-col items-center justify-center h-full px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-widest drop-shadow-[3px_3px_0px_black]">
@@ -65,18 +74,18 @@ function App() {
         {backgroundImages.panels.map((panel, index) => (
           <div key={index} className="comic-panel rounded-xl p-4 bg-black bg-opacity-60">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {panel.map((imgUrl, i) => (
+              {panel.images.map((imgUrl, i) => (
                 <div key={i} className="rounded overflow-hidden shadow-lg">
                   <img 
-  src={imgUrl} 
-  alt={`Panel ${index + 1} - ${i + 1}`} 
-  className="w-full h-[500px] object-contain bg-black rounded" 
-/>
+                    src={imgUrl} 
+                    alt={`Panel ${index + 1} - ${i + 1}`} 
+                    className="w-full h-[500px] object-contain bg-black rounded" 
+                  />
                 </div>
               ))}
             </div>
             <div className="text-white text-lg mt-4 text-center font-semibold">
-              Panel {index + 1}: This is a placeholder caption for this panel.
+              {panel.caption} {/* Display the caption here */}
             </div>
           </div>
         ))}
