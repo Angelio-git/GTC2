@@ -1,6 +1,5 @@
 import React from 'react';
 import { Twitter, Instagram as Telegram } from 'lucide-react';
-import './App.css'; // To load font styles
 
 function App() {
   const backgroundImages = {
@@ -21,7 +20,7 @@ function App() {
   };
 
   return (
-    <div className="relative w-full font-gta">
+    <div className="relative w-full text-white">
       {/* Hero Panel */}
       <section className="comic-panel" style={{
         backgroundImage: `url(${backgroundImages.main})`,
@@ -30,11 +29,11 @@ function App() {
         backgroundAttachment: 'fixed',
         height: '60vh',
       }}>
-        <div className="panel-content flex flex-col items-center justify-center h-full px-4">
-          <h1 className="text-5xl md:text-7xl font-bold text-white text-center mb-6 tracking-wider drop-shadow-[2px_2px_0px_black]">
+        <div className="panel-content flex flex-col items-center justify-center h-full px-4 text-center">
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-widest drop-shadow-[3px_3px_0px_black]">
             Grand Theft Chromosome
           </h1>
-          
+
           <div className="bg-white text-black px-6 py-3 rounded-full border-2 border-black max-w-full overflow-x-auto mb-6">
             <code className="whitespace-nowrap text-sm md:text-base font-mono">
               CA: Dm6j3n2k9ANW7MWqc1L9iDyNs38Re2WoXsYDxixepump
@@ -53,8 +52,8 @@ function App() {
       </section>
 
       {/* Scrollable Story Text */}
-      <section className="bg-black text-white py-10 px-4 text-center">
-        <div className="max-w-4xl mx-auto text-xl leading-relaxed">
+      <section className="bg-black text-white py-12 px-6 text-center">
+        <div className="max-w-4xl mx-auto text-xl leading-relaxed tracking-wide">
           <p>
             In this reimagined version of Grand Theft Auto (GTA), the game presents a colorful, vibrant urban landscape where the characters, all of whom have Down syndrome, navigate their lives with humor, heart, and a strong sense of community. The story follows a group of friends as they embark on various adventures, tackling everyday challenges with a mix of enthusiasm and creativity.
           </p>
@@ -72,7 +71,7 @@ function App() {
                 </div>
               ))}
             </div>
-            <div className="text-white text-lg mt-4 text-center">
+            <div className="text-white text-lg mt-4 text-center font-semibold">
               Panel {index + 1}: This is a placeholder caption for this panel.
             </div>
           </div>
