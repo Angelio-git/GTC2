@@ -3,7 +3,7 @@ import { Twitter, Instagram as Telegram } from 'lucide-react';
 
 function App() {
   const backgroundImages = {
-    main: "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_19-10-26.jpg",
+    main: "https://raw.githubusercontent.com/Angelio-git/GTC2/main/assets/photo_2025-04-09_19-10-26.jpg",
     panels: [
       "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel1.jpg",
       "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel2.jpg",
