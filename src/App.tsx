@@ -13,10 +13,7 @@ function App() {
         image: "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel3.jpg",
         caption: "They embark on a thrilling adventure."
       },
-      {
-        image: "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel5.jpg",
-        caption: "A moment of reflection and fun."
-      }
+     
     ]
   };
 
