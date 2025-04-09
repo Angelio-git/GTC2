@@ -62,13 +62,13 @@ function App() {
       </section>
 
       {/* Comic Panels with single image and text overlay */}
-      <section className="grid grid-cols-1 gap-4 bg-zinc-900"> {/* Reduced gap */}
+      <section className="grid grid-cols-1 gap-4 bg-zinc-900">
         {backgroundImages.panels.map((panel, index) => (
-          <div key={index} className="comic-panel rounded-xl bg-black bg-opacity-60 relative">
+          <div key={index} className="comic-panel rounded-xl bg-black bg-opacity-60 relative" style={{ height: '800px' }}> {/* Increased height of the container */}
             <img 
               src={panel.image} 
               alt={`Panel ${index + 1}`} 
-              className="w-full h-[700px] object-cover bg-black rounded" // Increased height, object-cover
+              className="w-full h-full object-cover bg-black rounded" // Use h-full to fill the container
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg font-semibold text-center z-10 p-4 bg-black bg-opacity-70 rounded-lg">
               {panel.caption}
