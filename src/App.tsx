@@ -2,14 +2,18 @@ import React from 'react';
 import { Twitter, Instagram as Telegram } from 'lucide-react';
 
 function App() {
-  // You'll replace these URLs with your GitHub image URLs
   const backgroundImages = {
-    main: "MAIN_BACKGROUND_URL",
+    main: "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_19-10-26.jpg",
     panels: [
-      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_19-10-26.jpg",
-      "PANEL_2_URL",
-      "PANEL_3_URL",
-      // Add more panel URLs as needed
+      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel1.jpg",
+      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel2.jpg",
+      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel3.jpg",
+      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel4.jpg",
+      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel5.jpg",
+      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel6.jpg",
+      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel7.jpg",
+      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel8.jpg",
+      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel9.jpg",
     ]
   };
 
@@ -20,7 +24,8 @@ function App() {
         backgroundImage: `url(${backgroundImages.main})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        height: '100vh',
       }}>
         <div className="panel-content flex flex-col items-center justify-center h-full px-4">
           <h1 className="text-6xl md:text-8xl font-bold text-center mb-8 tracking-wider"
@@ -49,53 +54,27 @@ function App() {
 
       {/* Story Panels */}
       <section className="grid grid-cols-1 gap-4 p-4">
-        {/* Panel 1 */}
-        <div className="comic-panel" style={{
-          backgroundImage: `url(${backgroundImages.panels[0]})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '80vh'
-        }}>
-          <div className="panel-content flex items-center justify-start p-8">
-            <div className="comic-text">
-              <p className="text-xl md:text-2xl">
-                In this reimagined version of Grand Theft Auto...
-              </p>
+        {backgroundImages.panels.map((url, index) => (
+          <div
+            key={index}
+            className="comic-panel rounded-xl overflow-hidden"
+            style={{
+              backgroundImage: `url(${url})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              height: '70vh'
+            }}
+          >
+            <div className="panel-content flex items-center justify-center h-full p-8 bg-black bg-opacity-40">
+              <div className="comic-text text-white max-w-2xl text-center">
+                <p className="text-xl md:text-2xl">
+                  {/* Placeholder content, can be updated per panel */}
+                  Panel {index + 1}: This is a placeholder caption for the comic panel.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Panel 2 */}
-        <div className="comic-panel" style={{
-          backgroundImage: `url(${backgroundImages.panels[1]})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '80vh'
-        }}>
-          <div className="panel-content flex items-center justify-end p-8">
-            <div className="comic-text">
-              <p className="text-xl md:text-2xl">
-                Where characters navigate their lives with humor and heart...
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Panel 3 */}
-        <div className="comic-panel" style={{
-          backgroundImage: `url(${backgroundImages.panels[2]})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '80vh'
-        }}>
-          <div className="panel-content flex items-center justify-center p-8">
-            <div className="comic-text">
-              <p className="text-xl md:text-2xl">
-                Creating a strong sense of community and adventure...
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </section>
     </div>
   );
