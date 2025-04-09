@@ -36,7 +36,7 @@ function App() {
           </div>
 
           <div className="flex gap-6">
-            <a href="https://x.com/Bark0na" className="hover:text-blue-400 transition-colors">
+            <a href="https://x.com/i/communities/1910105773859799231/" className="hover:text-blue-400 transition-colors">
               <Twitter size={32} />
             </a>
             <a href="#" className="hover:text-blue-400 transition-colors">
