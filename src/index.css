@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+.comic-panel {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  border: 12px solid black;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+.comic-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.panel-content {
+  position: relative;
+  z-index: 2;
+}
+
+.comic-text {
+  background: white;
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.8);
+  max-width: 80%;
+  margin: 1rem;
+  position: relative;
+}
+
+.comic-text::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  border: 10px solid transparent;
+  border-top-color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
