@@ -1,5 +1,5 @@
 import React from 'react';
-import { Twitter, Instagram as Telegram } from 'lucide-react';
+import { Twitter, Dexscreener as Telegram } from 'lucide-react';
 
 function App() {
   const backgroundImages = {
