@@ -26,7 +26,7 @@ function App() {
       }}>
         <div className="panel-content flex flex-col items-center justify-center h-full px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-widest drop-shadow-[3px_3px_0px_black]">
-            Grand Theft Chromosome
+            
           </h1>
 
           <div className="bg-white text-black px-6 py-3 rounded-full border-2 border-black max-w-full overflow-x-auto mb-6">
