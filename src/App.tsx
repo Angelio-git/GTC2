@@ -6,23 +6,15 @@ function App() {
     main: "https://eyojcehzhevkbnvbvzrp.supabase.co/storage/v1/object/public/random-storage/chromosome/banner%20large.png",
     panels: [
       {
-        images: [
-          "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_16-24-59.jpg",
-          "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_16-24-50.jpg"
-        ],
+        image: "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_16-24-59.jpg",
         caption: "Our heroes meet in the bustling city center."
       },
       {
-        images: [
-          "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel3.jpg",
-          "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel4.jpg"
-        ],
+        image: "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel3.jpg",
         caption: "They embark on a thrilling adventure."
       },
       {
-        images: [
-          "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel5.jpg"
-        ],
+        image: "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel5.jpg",
         caption: "A moment of reflection and fun."
       }
     ]
@@ -69,21 +61,15 @@ function App() {
         </div>
       </section>
 
-      {/* Comic Panels with multiple images */}
+      {/* Comic Panels with single image and text overlay */}
       <section className="grid grid-cols-1 gap-6 p-4 bg-zinc-900">
         {backgroundImages.panels.map((panel, index) => (
           <div key={index} className="comic-panel rounded-xl p-4 bg-black bg-opacity-60 relative">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {panel.images.map((imgUrl, i) => (
-                <div key={i} className="rounded overflow-hidden shadow-lg">
-                  <img 
-                    src={imgUrl} 
-                    alt={`Panel ${index + 1} - ${i + 1}`} 
-                    className="w-full h-[500px] object-contain bg-black rounded" 
-                  />
-                </div>
-              ))}
-            </div>
+            <img 
+              src={panel.image} 
+              alt={`Panel ${index + 1}`} 
+              className="w-full h-[500px] object-contain bg-black rounded" 
+            />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg font-semibold text-center z-10 p-4 bg-black bg-opacity-70 rounded-lg">
               {panel.caption}
             </div>
