@@ -72,7 +72,7 @@ function App() {
       {/* Comic Panels with multiple images */}
       <section className="grid grid-cols-1 gap-6 p-4 bg-zinc-900">
         {backgroundImages.panels.map((panel, index) => (
-          <div key={index} className="comic-panel rounded-xl p-4 bg-black bg-opacity-60">
+          <div key={index} className="comic-panel rounded-xl p-4 bg-black bg-opacity-60 relative">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {panel.images.map((imgUrl, i) => (
                 <div key={i} className="rounded overflow-hidden shadow-lg">
@@ -84,8 +84,8 @@ function App() {
                 </div>
               ))}
             </div>
-            <div className="text-white text-lg mt-4 text-center font-semibold">
-              {panel.caption} {/* Display the caption here */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg font-semibold text-center z-10 p-4 bg-black bg-opacity-70 rounded-lg">
+              {panel.caption}
             </div>
           </div>
         ))}
