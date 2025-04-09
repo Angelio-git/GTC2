@@ -7,13 +7,10 @@ function App() {
     panels: [
       {
         image: "https://raw.githubusercontent.com/Angelio-git/GTC2/main/assets/gta6_better.png",
-        caption: "Our heroes meet in the bustling city center."
+       
       },
-      {
-        image: "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel3.jpg",
-        caption: "They embark on a thrilling adventure."
-      },
-     
+  
+    
     ]
   };
 
