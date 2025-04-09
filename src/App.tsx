@@ -31,7 +31,7 @@ function App() {
 
           <div className="bg-white text-black px-6 py-3 rounded-full border-2 border-black max-w-full overflow-x-auto mb-6">
             <code className="whitespace-nowrap text-sm md:text-base font-mono">
-              CA: Dm6j3n2k9ANW7MWqc1L9iDyNs38Re2WoXsYDxixepump
+              CA: 
             </code>
           </div>
 
