@@ -1,5 +1,5 @@
 import React from 'react';
-import { Twitter, Instagram as Telegram } from 'lucide-react';
+import { Twitter } from 'lucide-react';
 
 function App() {
   const backgroundImages = {
@@ -46,7 +46,7 @@ function App() {
               <Twitter size={32} />
             </a>
             <a href="#" className="hover:text-blue-400 transition-colors">
-              <Telegram size={32} />
+             <img src="https://logos-world.net/wp-content/uploads/2023/08/Dexscreener-Symbol.png" alt="Dexscreener" style={{ height: '32px', width: '32px' }}/>
             </a>
           </div>
         </div>
