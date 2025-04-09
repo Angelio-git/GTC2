@@ -67,7 +67,11 @@ function App() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {panel.map((imgUrl, i) => (
                 <div key={i} className="rounded overflow-hidden shadow-lg">
-                  <img src={imgUrl} alt={`Panel ${index + 1} - ${i + 1}`} className="w-full h-72 object-cover" />
+                  <img 
+  src={imgUrl} 
+  alt={`Panel ${index + 1} - ${i + 1}`} 
+  className="w-full h-[500px] object-contain bg-black rounded" 
+/>
                 </div>
               ))}
             </div>
