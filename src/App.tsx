@@ -1,46 +1,46 @@
 import React from 'react';
 import { Twitter, Instagram as Telegram } from 'lucide-react';
+import './App.css'; // To load font styles
 
 function App() {
   const backgroundImages = {
-    main: "https://raw.githubusercontent.com/Angelio-git/GTC2/main/assets/photo_2025-04-09_19-10-26.jpg",
+    main: "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/photo_2025-04-09_19-10-26.jpg",
     panels: [
-      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel1.jpg",
-      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel2.jpg",
-      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel3.jpg",
-      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel4.jpg",
-      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel5.jpg",
-      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel6.jpg",
-      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel7.jpg",
-      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel8.jpg",
-      "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel9.jpg",
+      [
+        "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel1.jpg",
+        "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel2.jpg"
+      ],
+      [
+        "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel3.jpg",
+        "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel4.jpg"
+      ],
+      [
+        "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/panel5.jpg"
+      ]
     ]
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full font-gta">
       {/* Hero Panel */}
       <section className="comic-panel" style={{
         backgroundImage: `url(${backgroundImages.main})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
-        height: '100vh',
+        height: '60vh',
       }}>
         <div className="panel-content flex flex-col items-center justify-center h-full px-4">
-          <h1 className="text-6xl md:text-8xl font-bold text-center mb-8 tracking-wider"
-              style={{
-                textShadow: '4px 4px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000',
-              }}>
+          <h1 className="text-5xl md:text-7xl font-bold text-white text-center mb-6 tracking-wider drop-shadow-[2px_2px_0px_black]">
             Grand Theft Chromosome
           </h1>
           
-          <div className="bg-white text-black px-6 py-3 rounded-full border-2 border-black max-w-full overflow-x-auto mb-8">
-            <code className="whitespace-nowrap text-sm md:text-base">
+          <div className="bg-white text-black px-6 py-3 rounded-full border-2 border-black max-w-full overflow-x-auto mb-6">
+            <code className="whitespace-nowrap text-sm md:text-base font-mono">
               CA: Dm6j3n2k9ANW7MWqc1L9iDyNs38Re2WoXsYDxixepump
             </code>
           </div>
-          
+
           <div className="flex gap-6">
             <a href="#" className="hover:text-blue-400 transition-colors">
               <Twitter size={32} />
@@ -52,26 +52,28 @@ function App() {
         </div>
       </section>
 
-      {/* Story Panels */}
-      <section className="grid grid-cols-1 gap-4 p-4">
-        {backgroundImages.panels.map((url, index) => (
-          <div
-            key={index}
-            className="comic-panel rounded-xl overflow-hidden"
-            style={{
-              backgroundImage: `url(${url})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              height: '70vh'
-            }}
-          >
-            <div className="panel-content flex items-center justify-center h-full p-8 bg-black bg-opacity-40">
-              <div className="comic-text text-white max-w-2xl text-center">
-                <p className="text-xl md:text-2xl">
-                  {/* Placeholder content, can be updated per panel */}
-                  Panel {index + 1}: This is a placeholder caption for the comic panel.
-                </p>
-              </div>
+      {/* Scrollable Story Text */}
+      <section className="bg-black text-white py-10 px-4 text-center">
+        <div className="max-w-4xl mx-auto text-xl leading-relaxed">
+          <p>
+            In this reimagined version of Grand Theft Auto (GTA), the game presents a colorful, vibrant urban landscape where the characters, all of whom have Down syndrome, navigate their lives with humor, heart, and a strong sense of community. The story follows a group of friends as they embark on various adventures, tackling everyday challenges with a mix of enthusiasm and creativity.
+          </p>
+        </div>
+      </section>
+
+      {/* Comic Panels with multiple images */}
+      <section className="grid grid-cols-1 gap-6 p-4 bg-zinc-900">
+        {backgroundImages.panels.map((panel, index) => (
+          <div key={index} className="comic-panel rounded-xl p-4 bg-black bg-opacity-60">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {panel.map((imgUrl, i) => (
+                <div key={i} className="rounded overflow-hidden shadow-lg">
+                  <img src={imgUrl} alt={`Panel ${index + 1} - ${i + 1}`} className="w-full h-72 object-cover" />
+                </div>
+              ))}
+            </div>
+            <div className="text-white text-lg mt-4 text-center">
+              Panel {index + 1}: This is a placeholder caption for this panel.
             </div>
           </div>
         ))}
