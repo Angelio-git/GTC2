@@ -6,7 +6,7 @@ function App() {
     main: "https://eyojcehzhevkbnvbvzrp.supabase.co/storage/v1/object/public/random-storage/chromosome/banner%20large.png",
     panels: [
       {
-        image: "https://raw.githubusercontent.com/Angelio-git/GTC/main/assets/gta6.jpg",
+        image: "https://raw.githubusercontent.com/Angelio-git/GTC2/main/assets/gta6.jpg",
         caption: "Our heroes meet in the bustling city center."
       },
       {
