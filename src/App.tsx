@@ -65,7 +65,7 @@ function App() {
             <img 
               src={panel.image} 
               alt={`Panel ${index + 1}`} 
-              className="w-full h-full object-cover bg-black rounded" // Use h-full to fill the container
+              className="w-full h-[700] object-cover bg-black rounded" // Use h-full to fill the container
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg font-semibold text-center z-10 p-4 bg-black bg-opacity-70 rounded-lg">
               {panel.caption}
