@@ -61,7 +61,7 @@ function App() {
       {/* Comic Panels with single image and text overlay */}
       <section className="grid grid-cols-1 gap-4 bg-zinc-900">
         {backgroundImages.panels.map((panel, index) => (
-          <div key={index} className="comic-panel rounded-xl bg-black bg-opacity-60 relative" style={{ height: '800px' }}> {/* Increased height of the container */}
+          <div key={index} className="comic-panel rounded-xl bg-black bg-opacity-60 relative" style={{ height: '1800px' }}> {/* Increased height of the container */}
             <img 
               src={panel.image} 
               alt={`Panel ${index + 1}`} 
