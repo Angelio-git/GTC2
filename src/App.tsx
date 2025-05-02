@@ -3,7 +3,7 @@ import { Twitter } from 'lucide-react';
 
 function App() {
   const backgroundImages = {
-    main: "https://eyojcehzhevkbnvbvzrp.supabase.co/storage/v1/object/public/random-storage/chromosome/banner%20large.png",
+    main: "https://eyojcehzhevkbnvbvzrp.supabase.co/storage/v1/object/public/random-storage/chromosome/banner.jpg",
     panels: [
       {
         image: "https://raw.githubusercontent.com/Angelio-git/GTC2/main/assets/gta6_better.png",
